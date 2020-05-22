@@ -61,5 +61,5 @@ function inputMessage() {
 
 
 socket.on('chat-info', info => {
-    console.log(`\b\b\b\b\b\b${colors.yellow(info)}`)
+    console.log(`\b\b\b\b\b\b${colors.yellow(info)}\n`)
 })
