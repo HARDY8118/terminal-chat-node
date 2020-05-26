@@ -31,10 +31,10 @@ prompt.get({
 
 socket.on('chat-message', (message) => {
     if (message[0] == username) {
-        console.log(`You: ${message[1]}`)
+        console.log(` ${message[1]} \t ${colors.magenta.bold(message[2])}`)
     }
     else {
-        console.log(`\b\b\b\b\b\b${colors.blue.bold(message[0])}: ${message[1]}`)
+        console.log(`\b\b\b\b\b\b${colors.blue.bold(message[0])}: ${message[1]} \t ${colors.magenta.bold(message[2])}`)
     }
 })
 
@@ -62,4 +62,8 @@ function inputMessage() {
 
 socket.on('chat-info', info => {
     console.log(`\b\b\b\b\b\b${colors.yellow(info)}\n`)
+})
+
+socket.on('chat-error', error => {
+    console.log(`\b\b\b\b\b\b${colors.red(error)}\n`)
 })

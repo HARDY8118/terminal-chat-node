@@ -6,6 +6,7 @@
 <li> socket.io-client
 <li> prompt
 <li> colors
+<li> mongoose
 </ul>
 
 <br/>
